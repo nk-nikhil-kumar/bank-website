@@ -1,0 +1,437 @@
+/* -------------------------------------------------------------
+   Global Reset - Font aur Margin set karne ke liye 
+------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F8F9FA; 
+    color: #333;
+    line-height: 1.6;
+}
+.logo-image {
+    height: 40px;   /* adjust size */
+    width: auto;
+}
+
+/* -------------------------------------------------------------
+   Navigation Bar (Header Styling)
+------------------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.logo-circle {
+    width: 45px;
+    height: 45px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #800000; 
+}
+
+.navbar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 25px;
+    list-style: none; 
+}
+
+.navbar-links li a {
+    text-decoration: none; 
+    color: #000;
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+    color: #800000; 
+}
+
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+/* -------------------------------------------------------------
+   Hero Section (Top Banner)
+------------------------------------------------------------- */
+.hero-section {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 3.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 80%;
+    height: 5px;
+    background-color: #FFD700; 
+    border-radius: 5px;
+}
+
+/* -------------------------------------------------------------
+   Main/General Generic Content Containers (About/Deposit/Home)
+------------------------------------------------------------- */
+.content-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 3D Box Shadow */
+}
+.content-section h2 { 
+    margin-bottom: 20px; 
+    color: #800000; 
+    border-bottom: 2px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.content-section p { 
+    margin-bottom: 15px; 
+    color: #444; 
+    font-size: 1.05rem;
+}
+.content-section ul { 
+    padding-left: 20px; 
+    margin-bottom: 20px; 
+    color: #555; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+}
+.content-section ul li strong { color: #800000; }
+
+/* Tables (Board of Directors) */
+.table-responsive {
+    overflow-x: auto;
+}
+.director-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.director-table th, .director-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.director-table th {
+    background-color: #FFD700;
+    color: #800000;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+.contact-form button {
+    background-color: #800000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.contact-form button:hover {
+    background-color: #600000;
+}
+
+/* Grid layout for features/services on Home/Deposit */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+.service-card {
+    background: #fdfdfd;
+    padding: 25px;
+    border-top: 4px solid #FFD700;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+}
+.service-card h3 { color: #800000; margin-bottom: 15px; }
+
+/* Contact specific styling */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+.contact-item h3 { 
+    color: #800000; 
+    margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------------
+   Loan Category Cards (Images + Accodions)
+------------------------------------------------------------- */
+.loan-container {
+    max-width: 1100px;
+    margin: 50px auto; 
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
+}
+
+.loan-card {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+}
+
+.loan-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.loan-image {
+    flex: 1;
+    min-height: 300px;
+    background-color: #e0e0e0; 
+}
+
+.loan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loan-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loan-content h2 {
+    color: #800000; 
+    margin-bottom: 15px;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.loan-content p {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* -------------------------------------------------------------
+   Accordions (Tabbing System jaha niyam aur text khulte han)
+------------------------------------------------------------- */
+.accordion {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none; 
+    transition: background 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #f1f1f1;
+}
+
+.accordion-header span {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active span {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    padding: 0 20px; 
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background-color: #fff;
+    color: #444;
+}
+
+.accordion-body.active {
+    padding: 20px;
+    max-height: 2000px; 
+    border-top: 1px solid #e0e0e0;
+}
+
+.accordion-body ol, .accordion-body ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+/* -------------------------------------------------------------
+   Footer (Bottom part)
+------------------------------------------------------------- */
+.footer-section {
+    background-color: #FFD700;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #800000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.footer-text {
+    color: #000;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* -------------------------------------------------------------
+   Responsive Design (Phones/Tablets)
+------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 75px; 
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    .navbar-links.show {
+        display: flex;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .hamburger-menu {
+        display: block; 
+    }
+    .navbar-title {
+        font-size: 0.9rem; 
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .loan-card, .loan-card.reverse {
+        flex-direction: column;
+    }
+    .loan-image {
+        min-height: 250px;
+    }
+    .loan-container {
+        gap: 30px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
